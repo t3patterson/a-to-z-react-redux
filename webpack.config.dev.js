@@ -18,6 +18,12 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'eslint-loader',
+        include: path.resolve(__dirname, 'js')
+      },
       { 
         test: /\.js$/,
         loader: 'babel-loader',

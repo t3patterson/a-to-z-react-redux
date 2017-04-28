@@ -6,7 +6,8 @@
   "author": "Travis Hubbard<btholt@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build:dev": "webpack --config webpack.config.dev.js"
+    "dev": "webpack --watch --display-modules --config webpack.config.dev.js",
+    "lint": "eslint js/**/*.js"
   },
   "dependencies": {
     "react": "^15.5.4",
@@ -17,6 +18,15 @@
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^6.10.3",
+    "eslint-plugin-standard": "^3.0.1",
     "webpack": "v2.1.0-beta.25"
   },
   "directories": {

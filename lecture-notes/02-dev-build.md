@@ -115,3 +115,72 @@ Configure `babelrc`
 
 #### (5) Run webpack + add it to npm scripts
 `"build:dev" : webpack --config webpack.config.dev.js`
+
+#### (6) Convert vanilla react to jsx
+- change `js/app.js`
+
+```js
+var NestedComponents = React.createClass({
+  render: function () {
+    return (
+      // React.createElement('div', null, [
+      //   React.createElement('h1', null, 'Welcome to React!'),
+      //   React.createElement(ListComponent),
+      //   React.createElement('hr', null),
+      //   React.createElement(Toggler)
+      // ])
+      <div>
+        <h1>Welcome to React!</h1>
+        <ListComponent/>
+        <hr/>
+        <Toggler/>
+      </div>
+    )
+  }
+})
+```
+
+- change `js/ListComponent.js`
+
+```js
+var ListComponent = React.createClass({
+  render: function () {
+
+    return (
+     // React.createElement('ul', null, [
+     //   React.createElement(ListItem, {title: 'Get groceries', textColor: 'peru'}),
+     //   React.createElement(ListItem, {title: 'Bathe the cat', textColor: 'tan'}),
+     //   React.createElement(ListItem, {title: 'Prepare iced tea', textColor: 'skyblue'})
+     // ])
+      <ul>
+        <ListItem title={'get groceries'} textColor={'peru'}/>
+        <ListItem title={'Bathe the cat'} textColor={'tan'}/>
+        <ListItem title={'Prepare the iced tea'} textColor={'skyblue'}/>
+      </ul>
+    )
+  }
+})
+```
+
+#### (7) Configure linter (standardjs)
+- code linters enforce discipline and consistency in your coding style.
+- code is readable 
+
+in Terminal:
+```
+yarn add --dev eslint-config-standard eslint-config-standard-react eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node eslint-plugin-react
+```
+
+create `eslintrc.json`
+```json
+{
+  "extends" : ["standard" , "standard-react"]
+}
+```
+
+in `package.json`
+```
+scripts: {
+  "" : ""
+}
+```
