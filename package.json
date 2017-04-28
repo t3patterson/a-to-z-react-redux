@@ -5,17 +5,25 @@
   "main": "index.js",
   "author": "Travis Hubbard<btholt@gmail.com>",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build:dev": "webpack --config webpack.config.dev.js"
+  },
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "v2.1.0-beta.25"
+  },
   "directories": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/t3patterson/superduper-react-redux.git"
+    "url": "git+https://github.com/t3patterson/a-to-z-react-redux.git"
   }
 }
