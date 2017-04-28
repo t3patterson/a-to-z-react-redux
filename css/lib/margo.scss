@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Libre+Franklin:400,600,600italic,400italic,200italic,200);
+
+@import "./parts/_mixins.scss";
+@import "./parts/_variables.scss";
+
+@import "./parts/_buttons.scss";
+@import "./parts/_containers.scss";
+@import "./parts/_forms.scss";
+@import "./parts/_grid.scss";
+@import "./parts/_helpers.scss";
+@import "./parts/_lists.scss";
+@import "./parts/_miscellaneous.scss";
+@import "./parts/_segment.scss";
+@import "./parts/_tables.scss";
+@import "./parts/_tiles.scss";
+@import "./parts/_typography.scss";
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 16px;
+}
+
+body{
+  margin: 0;
+}
+
+img { max-width: 100%; }

@@ -1,0 +1,191 @@
+// INPUT SETTINGS
+// -------------------------
+.M-input-paddings,
+input[type='text'],
+input[type='email'],
+input[type='date'],
+input[type='password']{
+  padding: 0 .75rem;
+  height: 2.5rem;
+}
+
+input[type='date'],
+input[type='email'],
+input[type='password']{
+  padding: 0 .1.25rem;
+}
+
+
+
+.M-input-defaults,
+input[type='text'],
+input[type='email'],
+input[type='password'],
+select,
+textarea{
+  line-height: 1.5;
+  outline: 0;
+  border: $med-gray 1px solid;
+  font-size: 1rem;
+  border-radius: $site-border-radius;
+  margin-bottom: 1.25rem;
+  background: #fff;
+
+  &:focus{
+    border: 1px solid $light-primary;
+  }
+}
+
+.M-textarea {
+  padding: .5rem .75rem;
+  &:focus{
+    border: 1px solid $light-primary;
+  }
+}
+
+
+.M-form-group{
+  display: block;
+
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  input[type='date'],
+  select{
+    @extend .M-input-paddings;
+  }
+
+
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  input[type='date'],
+  select,
+  textarea{
+    @extend .M-textarea;
+    width: 100%;
+  }
+
+  textarea{
+    @extend .M-input-paddings;
+  }
+}
+
+ .M-form-group__field{
+   display: inline-block;
+   label{
+     display: block;
+     font-weight: 700;
+     margin-bottom: .5rem;
+   }
+
+   input[type='text'],
+   input[type='email'],
+   input[type='password'],
+   select,
+   textarea{
+     display: block;
+   }
+ }
+
+//Checkbox Settings
+//=======================
+.M-checkbox{
+    padding: initial;
+    -webkit-appearance: none;
+    padding: 0;
+    display: inline-block;
+    margin: 0 3px 0 0;
+    vertical-align: bottom;
+    width: 24px; height: 24px;
+    border: 1px #333 solid;
+    position: relative;
+    z-index: 9;
+    &:focus{
+        outline: 0;
+    }
+    &:checked{
+        background-color: $info-color;
+        &:after{
+            position: absolute;
+            top: 40%; left: 50%;
+            z-index: 10;
+            content: "";
+            display: block;
+            width: 11px;
+            height: 5px;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            border-left: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+
+        }
+    }
+}
+
+
+//Radio Settings
+//=======================
+.M-radiocheck{
+ -webkit-appearance: none;
+ margin-right: .75rem;
+ > input[type="radio"],
+ > input[type="checkbox"],
+ > span{
+   display: inline-block;
+   vertical-align: middle;
+ }
+
+ > span {
+   font-weight: initial;
+ }
+}
+
+
+.M-radio{
+    padding: 0;
+    margin: 0 3px 0 0px;
+    -webkit-appearance: none;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 24px; height: 24px;
+    border: 1px #333 solid;
+    border-radius: 50%;
+    position: relative;
+    z-index: 9;
+    &:focus{
+        outline: 0;
+    }
+    &:checked{
+        &:after{
+            position: absolute;
+            background-color: $info-color;
+            top: 50%; left: 50%;
+            z-index: 10;
+            content: "";
+            display: block;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            transform: translate(-50%, -50%) rotate(-45deg);
+
+        }
+    }
+}
+
+.M-select {
+  -webkit-appearance: none;
+  background: #ddd;
+
+  &:before{
+    background: #333;
+    width: 3px;
+    height: 3px;
+    border-bottom: 2px solid #333;
+    border-left: 2px solid #333;
+  }
+}
+
+
+input[type='date']{
+  font-family: $font-stack
+}
