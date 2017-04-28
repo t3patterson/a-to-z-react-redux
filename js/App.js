@@ -1,26 +1,28 @@
+import {HashRouter, Route} from 'react-router-dom'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import ListComponent from './ListComponent'
-import Toggler from './Toggler'
 
-var NestedComponents = React.createClass({
+import Landing from './components/Landing'
+import About from './components/About'
+import Directory from './components/Directory'
+import Login from './components/Login'
+
+import AppNav from './components/AppNav'
+
+const App = React.createClass({
   render: function () {
     return (
-      // React.createElement('div', null, [
-      //   React.createElement('h1', null, 'Welcome to React!'),
-      //   React.createElement(ListComponent),
-      //   React.createElement('hr', null),
-      //   React.createElement(Toggler)
-      // ])
-      <div>
-        <h1>Welcome to React!</h1>
-        <ListComponent />
-        <hr />
-        <hr />
-        <Toggler />
-      </div>
+      <HashRouter hashType="slash">
+        <div>
+          <AppNav/>
+          <Route exact path='/' component={Landing} />
+          <Route path='/about' component={About} />
+          <Route path='/directory' component={Directory} />
+          <Route path='/login' component={Login} />
+        </div>
+      </HashRouter>
     )
   }
 })
 
-ReactDOM.render(React.createElement(NestedComponents), document.getElementById('app-container'))
+ReactDOM.render(<App />, document.getElementById('app-container'))

@@ -1,0 +1,18 @@
+nav {
+  background: #333;
+  text-align: center;
+  color: #89C4F4;
+}
+
+nav > * {
+  padding: 20px 0;
+  border: 2px solid #89C4F4;
+}
+
+header{
+  min-height: 50vh;
+  color: #fff;
+  background: #005c97; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #005c97, #363795); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #005c97, #363795); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
