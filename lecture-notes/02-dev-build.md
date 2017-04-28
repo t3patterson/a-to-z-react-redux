@@ -179,8 +179,28 @@ create `eslintrc.json`
 ```
 
 in `package.json`
-```
+```json
 scripts: {
-  "" : ""
+  "lint": "eslint js/**/*.js"
 }
+```
+
+#### (8) Automate Linting with webpack
+- install the loader
+`yarn add eslint-loader --dev`
+- include it as a preloader
+
+in `webpack.config.dev.js`:
+```js
+  module: {
+    rules: [
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'eslint-loader',
+        include: path.resolve(__dirname, 'js')
+      },
+      ...
+    ]
+  }
 ```
