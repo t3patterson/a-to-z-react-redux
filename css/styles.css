@@ -1,3 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+img{
+  display: block;
+}
+
 nav {
   background: #333;
   text-align: center;
@@ -9,10 +16,29 @@ nav > * {
   border: 2px solid #89C4F4;
 }
 
+.nav__selected{
+  background: #89C4F4;
+  color: #333;
+}
+
 header{
   min-height: 50vh;
   color: #fff;
   background: #005c97; /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #005c97, #363795); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #005c97, #363795); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+figure{
+  padding: 15px;
+  border: #ccc 1px solid;
+  border-radius: 3px;
+}
+
+figure div{
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  background: #eee;
+  border-radius: 50%;
 }

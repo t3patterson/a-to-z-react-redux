@@ -17,7 +17,7 @@ const Login = React.createClass({
             <input type='text' name='password' />
           </div>
           <div className='M-form-group__field'>
-            <input type='submit' value='Log In' />       
+            <input type='submit' value='Log In' />
           </div>
         </form>
       </div>

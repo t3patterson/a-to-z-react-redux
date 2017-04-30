@@ -1,0 +1,113 @@
+[
+  {
+    "id" : 1,
+    "firstName": "Anna",
+    "middleName": "",
+    "lastName": "Batchelor",
+    "email": "anna_batchelor@mail.com",
+    "gender" : "female",
+    "parents" : [3, 4]
+  },
+  {
+    "id": 2,
+    "firstName" : "Ellen",
+    "middleName" : "",
+    "lastName" : "Patterson",
+    "email" : "ellen_patterson@mail.com",
+    "gender" : "female",
+    "parents" : [3, 4]
+  },
+  {
+    "id": 3,
+    "firstName" : "Kirk",
+    "middleName" : "",
+    "lastName" : "Patterson",
+    "email" : "kirrrk@mail.com",
+    "gender" : "female",
+    "parents" : [5, 6],
+    "spouse" : 4
+  },
+  {
+    "id": 4,
+    "firstName" : "Carol",
+    "middleName" : "Gaylor",
+    "lastName" : "Patterson",
+    "email" : "cgp@mail.com",
+    "gender" : "female",
+    "parents" : [],
+    "spouse" : 3
+  },
+  {
+    "id": 5,
+    "firstName" : "Woodrow",
+    "middleName" : "Kuykendahl",
+    "lastName" : "Patterson",
+    "email" : "",
+    "gender" : "female",
+    "parents" : []
+  },
+  {
+    "id": 6,
+    "firstName" : "Eileen",
+    "middleName" : "Bertha",
+    "lastName" : "Patterson",
+    "email" : "",
+    "gender" : "female",
+    "parents" : []
+  },
+  {
+    "id": 7,
+    "firstName" : "Evelyn",
+    "middleName" : "Elizabeth",
+    "lastName" : "Batchelor",
+    "email" : "evybevy@mail.com",
+    "gender" : "female",
+    "parents" : [1]
+  },
+  {
+    "id": 8,
+    "firstName" : "John",
+    "middleName" : "David",
+    "lastName" : "Patterson",
+    "email" : "jdp@mail.com",
+    "gender" : "female",
+    "parents" : [1]
+  },
+  {
+    "id": 9,
+    "firstName" : "Isabella",
+    "middleName" : "Ann",
+    "lastName" : "Batchelor",
+    "email" : "bella@mail.com",
+    "gender" : "female",
+    "parents" : [1]
+  },
+  {
+    "id" : 10,
+    "firstName" : "Connie",
+    "middleName" : "Claire",
+    "lastName" : "Patterson",
+    "email" : "patterson777@mail.com",
+    "gender" : "female",
+    "parents" : [5, 6]
+  },
+  {
+    "id": 11,
+    "firstName" : "Travis",
+    "middleName" : "Patterson",
+    "lastName" : "Hubbard",
+    "email" : "tph713@mail.com",
+    "gender" : "male",
+    "parents" : [10]
+  },
+  {
+    "id": 12,
+    "firstName" : "Ben",
+    "middleName" : "Wilson",
+    "lastName" : "Hubbard",
+    "email" : "bhubb87",
+    "gender" : "male",
+    "parents" : [10]
+  }
+]
+

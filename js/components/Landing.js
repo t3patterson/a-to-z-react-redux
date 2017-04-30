@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Landing = React.createClass({
- 
+
   render: function () {
     return (
       <header>

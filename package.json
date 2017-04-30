@@ -7,13 +7,16 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack --watch --display-modules --config webpack.config.dev.js",
-    "lint": "eslint js/**/*.js"
+    "lint": "eslint js/**/*.js",
+    "lint:fix": "eslint js/**/*.js --fix"
   },
   "dependencies": {
+    "prop-types": "^15.5.8",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router": "4.1.1",
-    "react-router-dom": "4.1.1"
+    "react-router-dom": "4.1.1",
+    "shortid": "^2.2.8"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
@@ -29,6 +32,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^6.10.3",
     "eslint-plugin-standard": "^3.0.1",
+    "json-loader": "^0.5.4",
     "webpack": "v2.1.0-beta.25"
   },
   "directories": {

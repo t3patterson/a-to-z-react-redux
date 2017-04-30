@@ -24,6 +24,10 @@ module.exports = {
         loader: 'eslint-loader',
         include: path.resolve(__dirname, 'js')
       },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
       { 
         test: /\.js$/,
         loader: 'babel-loader',
