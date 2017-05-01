@@ -36,19 +36,18 @@ const Login = React.createClass({
   _handleSubmit: function (evt) {
     evt.preventDefault();
     let stateObj = {}
-    
-    if (evt.target.name.trim() === '') {
-       this.setState({
-         emailInputMsg: 'Please enter an email address.'
-       })
+    stateObj.emailInputMsg = ''
+    stateObj.passwordInputMsg = ''
+
+    if (evt.target.email.trim() === '') {
+      stateObj.emailInputMsg = 'Please enter an email address.'
     }
 
-     if (evt.target.name.trim() === '') {
-        this.setState({
-          passwordInputMsg: 'Please enter a password value.'
-        })
-     }
-
+    if (evt.target.password.trim() === '') {
+      stateObj.passwordInputMsg: 'Please enter a password value.'
+    }
+    
+    this.setState(stateObj)
   },
   
   render: function () {
@@ -75,4 +74,68 @@ const Login = React.createClass({
   }
 })
 ```
-#### (3) Setting initital state w/ `getInitialState()`
+#### (3) Handling Changing Input values
++ (1) Set initial state `getInitialState` and `<input value={this.state.searchTxtInput}`
+
++ (2) Handle the input with `onChange()` and `_updateSearchBox`
+
++ (3) write the `.filter()` method in the `_showPersonCards` helper for when the state changes.
+
+in `Directory.js`
+```js
+ const Directory = React.createClass({
+   propTypes: {
+     familyMembers: PropTypes.array
+   },
+  
+  // --- (1a) ---
+   getInitialState: function () {
+     return {
+       searchText: ''
+     }
+   },
+  
+
+   _showPersonCards: function (familyMembers = [], searchText = '') {
+     return familyMembers
+       // --- (3) ---
+       .filter((famData) => {
+         if (searchText.length === 0) return true
+         let nameNormalized = `${famData.firstName} ${famData.middleName} ${famData.lastName}`.toUpperCase()
+         let searchTextNormalized = searchText.toUpperCase().trim()
+         return nameNormalized.indexOf(searchTextNormalized) >= 0
+       })
+       .map((famData) => {
+         return <PersonCard {...famData} key={shortid.generate()} />
+       })
+   },
+  
+  // (2)
+   _updateSearchBox: function (evt) {
+     this.setState({
+       searchText: evt.target.value
+     })
+   },
+
+   render: function () {
+     let cardsJSXArray = this._showPersonCards(this.props.familyMembers, this.state.searchText)
+     return (
+       <div>
+         <h2 className='M-bg_success'>Directory</h2>
+         <input 
+           onChange={this._updateSearchBox}
+           {/*  // --- (1b) ---*/}
+           value={this.state.searchText}
+           type='text'
+          />
+
+         <h6>There {cardsJSXArray.length === 1 ? `is` : `are`} <mark>{cardsJSXArray.length}</mark> matching {cardsJSXArray.length === 1 ? `result` : `results`}: </h6>
+
+         <div className='M-grid'>
+           {cardsJSXArray}
+         </div>
+       </div>
+     )
+   }
+ })
+```

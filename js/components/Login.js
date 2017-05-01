@@ -9,23 +9,22 @@ const Login = React.createClass({
   },
 
   _handleSubmit: function (evt) {
-    evt.preventDefault();
+    evt.preventDefault()
     let stateObj = {}
-    
-    if (evt.target.name.trim() === '') {
-       this.setState({
-         emailInputMsg: 'Please enter an email address.'
-       })
+    stateObj.emailInputMsg = ''
+    stateObj.passwordInputMsg = ''
+
+    if (evt.target.email.value.trim() === '') {
+      stateObj.emailInputMsg = 'Please enter an email address.'
     }
 
-     if (evt.target.name.trim() === '') {
-        this.setState({
-          passwordInputMsg: 'Please enter a password value.'
-        })
-     }
-
+    if (evt.target.password.value.trim() === '') {
+      stateObj.passwordInputMsg = 'Please enter a password value!'
+    }
+    
+    this.setState(stateObj)
   },
-  
+
   render: function () {
     return (
       <div>
@@ -36,14 +35,14 @@ const Login = React.createClass({
           <div className='M-md-6-of-12 M-form-group__field'>
             <label>Email</label>
             <input type='text' name='email' />
-            <p className="M-text_center M-bg_fail">
+            <p className='M-text_center M-bg_fail'>
               {this.state.emailInputMsg}
             </p>
           </div>
           <div className='M-md-6-of-12 M-form-group__field'>
             <label>Password</label>
             <input type='text' name='password' />
-            <p className="M-text_center M-bg_fail">
+            <p className='M-text_center M-bg_fail'>
               {this.state.passwordInputMsg}
             </p>
           </div>

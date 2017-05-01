@@ -8,7 +8,7 @@ const Directory = React.createClass({
     familyMembers: PropTypes.array
   },
 
-  getInitialState: function(){
+  getInitialState: function () {
     return {
       searchText: ''
     }
@@ -38,7 +38,7 @@ const Directory = React.createClass({
     return (
       <div>
         <h2 className='M-bg_success'>Directory</h2>
-        <input 
+        <input
           onChange={this._updateSearchBox}
           value={this.state.searchText}
           type='text'
