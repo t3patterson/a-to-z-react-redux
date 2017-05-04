@@ -27,7 +27,7 @@ const Login = React.createClass({
 
   render: function () {
     return (
-      <div>
+      <div className="login">
         <h2>
           Login
         </h2>

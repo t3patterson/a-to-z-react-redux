@@ -105,9 +105,58 @@
     "firstName" : "Ben",
     "middleName" : "Wilson",
     "lastName" : "Hubbard",
-    "email" : "bhubb87",
+    "email" : "bhubb87@mail.com",
     "gender" : "male",
     "parents" : [10]
+  },
+  {
+    "id" : 13,
+    "firstName" : "Susan",
+    "middleName" : "Patterson",
+    "lastName" : "Johnson",
+    "email" : "suze@mail.com",
+    "parents" : [5,6]
+  },
+  {
+    "id" : 14,
+    "firstName" : "Jacky",
+    "middleName" : "",
+    "lastName" : "Govea",
+    "email" : "wackyjack@mail.com",
+    "parents": [13]
+  },
+  {
+    "id" : 15,
+    "firstName" : "Roxi",
+    "middleName" : "",
+    "lastName" : "Tsakas",
+    "email" : "roxij@mail.com",
+    "parents": [13]
+  },
+  {
+    "id" : 16,
+    "firstName" : "Tristan",
+    "middleName" : "Raymond",
+    "lastName" : "Tsakas",
+    "email" : "",
+    "parents" : [15]
+  },
+  {
+    "id" : 17,
+    "firstName" : "Dayton",
+    "middleName" : "Dashmir",
+    "lastName" : "Tsakas",
+    "email" : "",
+    "parents" : [15]
+  },
+  {
+    "id" : 18,
+    "firstName" : "Tasos",
+    "middleName" : "",
+    "lastName" : "Tsakas",
+    "email" : "tasos@mail.com",
+    "parents": [],
+    "spouse" : 15
   }
 ]
 

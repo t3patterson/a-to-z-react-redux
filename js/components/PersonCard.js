@@ -22,6 +22,10 @@ const PersonCard = React.createClass({
           {`${firstName} ${middleName} ${lastName}`}
           <br />
           <small className='M-text_muted'>{`${email}` || '-'}</small>
+          <hr />
+          <button className='M-btn_sm'>Add to Contact List</button>
+          <br />
+          <button className='M-btn_sm'>Add to Faves List</button>
         </p>
       </figure>
     )

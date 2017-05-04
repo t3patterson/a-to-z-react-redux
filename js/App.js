@@ -8,6 +8,7 @@ import Directory from './components/Directory'
 import Login from './components/Login'
 
 import AppNav from './components/AppNav'
+import Header from './components/Header'
 
 import famData from './data.json'
 
@@ -16,6 +17,7 @@ const App = React.createClass({
     return (
       <HashRouter hashType='slash'>
         <div>
+          <Route path='/' component={(props) => <Header {...props} />}/>
           <AppNav />
           <Route
             exact
@@ -30,7 +32,7 @@ const App = React.createClass({
 
           <Route
             path='/directory'
-            component={() => <Directory familyMembers={famData} />}
+            component={(props) => <Directory familyMembers={famData} {...props} />}
           />
 
           <Route

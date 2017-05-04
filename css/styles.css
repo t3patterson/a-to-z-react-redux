@@ -5,6 +5,19 @@ img{
   display: block;
 }
 
+header{
+  border: 2px solid #89C4F4;
+  padding: 10px;
+}
+
+header img{
+  max-width: 50px;
+}
+
+h2 {
+  padding: 5px;
+}
+
 nav {
   background: #333;
   text-align: center;
@@ -21,19 +34,66 @@ nav > * {
   color: #333;
 }
 
-header{
-  min-height: 50vh;
+/* Landing.js */
+div.landing h2{
   color: #fff;
   background: #005c97; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #005c97, #363795); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #005c97, #363795); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-figure{
+div.landing button {
+  float: right;
+  display: block;
+}
+
+div.landing ul{
+  padding: 0;
+} 
+div.landing li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 8px;
+  margin: 8px;
+  background: #89C4F4;
+}
+
+
+/* About.js */
+div.about h2{
+  background: #C0392B;
+  color: #fff;
+}
+
+
+/* About.js */
+div.directory h2{
+  background: #049372;
+  color: #fff;
+}
+
+div.directory figure{
   padding: 15px;
   border: #ccc 1px solid;
   border-radius: 3px;
 }
+
+div.directory figure button:nth-of-type(1) {
+  background: #89C4F4;
+}
+
+div.directory figure button:nth-of-type(2) {
+  background: #9B59B6;
+  color: #fff;
+}
+
+
+/* Login.js */
+div.login h2{
+  background: #34495E;
+  color: #fff;
+}
+
+
+
 
 figure div{
   width: 120px;

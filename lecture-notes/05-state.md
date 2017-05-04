@@ -98,7 +98,7 @@ in `Directory.js`
 
    _showPersonCards: function (familyMembers = [], searchText = '') {
      return familyMembers
-       // --- (3) ---
+       // --- (3) --- 
        .filter((famData) => {
          if (searchText.length === 0) return true
          let nameNormalized = `${famData.firstName} ${famData.middleName} ${famData.lastName}`.toUpperCase()

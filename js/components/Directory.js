@@ -1,11 +1,19 @@
+/* global fetch */ 
 import React from 'react'
 import PropTypes from 'prop-types'
 import PersonCard from './PersonCard'
 import shortid from 'shortid'
+import axios from 'axios'
+
 
 const Directory = React.createClass({
   propTypes: {
     familyMembers: PropTypes.array
+  },
+
+  componentDidMount: function () {
+    axios.get('https://api-a-to-z-react-redux.herokuapp.com/api/family-members')
+      .then((d) => { console.log(d) })
   },
 
   getInitialState: function () {
@@ -36,8 +44,8 @@ const Directory = React.createClass({
   render: function () {
     let cardsJSXArray = this._showPersonCards(this.props.familyMembers, this.state.searchText)
     return (
-      <div>
-        <h2 className='M-bg_success'>Directory</h2>
+      <div className='directory'>
+        <h2>Directory</h2>
         <input
           onChange={this._updateSearchBox}
           value={this.state.searchText}

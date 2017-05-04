@@ -1,7 +1,6 @@
 # Part 3 -- React Router
 
-#### (1) Install React Router 4.1.1
-`yarn add react-router-dom@4.1.1 -E`
+#### (1) Remove search bar
 
 #### (2) Import Components & Configure the Router
 in `app.js`
@@ -38,6 +37,7 @@ import React from 'react'
 import {NavLink} from 'react-router-dom'
 
 const AppNav = React.createClass({
+
   render: function () {
     let navItemClass = 'M-sm-3-of-12'
     let navItemActiveClass = 'M-sm-3-of-12 nav__selected'
@@ -72,51 +72,6 @@ const App = React.createClass({
           ...
         </div>
       </HashRouter>
-    )
-  }
-})
-```
-
-#### (4) Conditionally Render JSX based on path
-Create the route
-```js
-const App = React.createClass({
-  render: function () {
-    return (
-      <HashRouter hashType="slash">
-        <div>
-          <Route path='/' component={(props) => <Header {...props} /> )} />
-          <AppNav/>
-          <Route exact path='/' component={Landing} />
-          ...
-        </div>
-      </HashRouter>
-    )
-  }
-})
-```
-
-
-Create the `Header.js` Component 
-```js
-var Header = React.createClass({
-  
-  render: function () {
-    let rightSideJSX = ''
-    if (this.props.location.pathname !== '/login') {
-      rightSideJSX = <Link className="M-btn M-btn_sm" to='/'>
-        Create Your Account!
-      </Link>
-    }
-    return (
-      <header className='M-grid M-grid__adjacent'>
-        <div className='M-sm-3-of-12'>
-          <img src='./images/bf-logo.png' />
-        </div>
-        <div className='M-sm-9-of-12 M-text_right'>
-          {rightSideJSX}
-        </div>
-      </header>
     )
   }
 })

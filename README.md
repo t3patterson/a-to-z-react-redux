@@ -7,3 +7,8 @@
   - npm installs not deterministic; 
   - yarn installs dependencies in flat structure and links them together
   - good for apps, not libs
+
+
+#### Devnotes
+
+- go through and change css class names
