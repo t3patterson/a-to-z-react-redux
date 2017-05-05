@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 img{
   display: block;
 }
@@ -55,8 +56,6 @@ div.landing li {
   margin: 8px;
   background: #89C4F4;
 }
-
-
 /* About.js */
 div.about h2{
   background: #C0392B;
