@@ -11,7 +11,7 @@ const PersonCard = React.createClass({
   },
 
   render: function () {
-    let {firstName, lastName, middleName, id, email} = this.props
+    let {firstName, lastName, middleName, id, email} = this.props.data
     middleName = middleName[0] ? `${middleName[0]}.` : ''
     return (
       <figure className='M-sm-12-of-12 M-md-4-of-12'>
@@ -23,7 +23,7 @@ const PersonCard = React.createClass({
           <br />
           <small className='M-text_muted'>{`${email}` || '-'}</small>
           <hr />
-          <button className='M-btn_sm'>Add to Contact List</button>
+          <button className='M-btn_sm' onClick={()=>{ this.props.addRecipient(this.props.data) }}>Add to Contact List</button>
           <br />
           <button className='M-btn_sm'>Add to Faves List</button>
         </p>

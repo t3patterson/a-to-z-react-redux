@@ -3,17 +3,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import PersonCard from './PersonCard'
 import shortid from 'shortid'
-import axios from 'axios'
 
 
 const Directory = React.createClass({
   propTypes: {
     familyMembers: PropTypes.array
-  },
-
-  componentDidMount: function () {
-    axios.get('https://api-a-to-z-react-redux.herokuapp.com/api/family-members')
-      .then((d) => { console.log(d) })
   },
 
   getInitialState: function () {
@@ -31,7 +25,14 @@ const Directory = React.createClass({
         return nameNormalized.indexOf(searchTextNormalized) >= 0
       })
       .map((famData) => {
-        return <PersonCard {...famData} key={shortid.generate()} />
+        console.log(this.props.addRecipient)
+        return (
+          <PersonCard 
+            data={famData} 
+            key={shortid.generate()} 
+            addRecipient={this.props.addRecipient} 
+          />
+        )
       })
   },
 

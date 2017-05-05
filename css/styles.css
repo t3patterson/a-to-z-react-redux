@@ -56,6 +56,15 @@ div.landing li {
   margin: 8px;
   background: #89C4F4;
 }
+
+div.landing li span{
+  background: #ddd;
+  color: #C0392B;
+  display: inline-block;
+  margin: -8px -8px -8px 8px;
+  padding: 12px;
+}
+
 /* About.js */
 div.about h2{
   background: #C0392B;
